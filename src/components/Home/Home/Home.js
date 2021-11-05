@@ -10,7 +10,7 @@ const Home = () => {
       <Header />
       <div className="container">
         <Promotion />
-        <h3 className="text-secondary mt-5 pt-5">Popular Restaurant</h3>
+        <h3 className="text-secondary mt-5 pt-5">Popular Restaurants</h3>
         <div className="row">
           <div className="col-md-3">
             <Restaurants />

@@ -58,7 +58,7 @@ const Login = () => {
               </button>
               <br />
               <div className="d-flex mt-3">
-                <span>Haven't an account yet?</span>
+                <span>Don´t have an account yet?</span>
                 <Link to="/signup" className={classes.register}>
                   Create an account here !
                 </Link>
