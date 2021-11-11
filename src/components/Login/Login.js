@@ -66,13 +66,13 @@ const Login = () => {
               <div className="d-flex mt-3">
                 <span>Don't have an account yet?</span>
                 <Link to="/signup" className={classes.register}>
-                  Create an account here !
+                  Sign up here!
                 </Link>
               </div>
               <div className="d-flex mt-3">
-                <span>A Manager?</span>
+                <span>Or are you a restaurant manager?</span>
                 <Link to="/admin" className={classes.register}>
-                  Go On
+                 Sign up here!
                 </Link>
               </div>
             </form>
