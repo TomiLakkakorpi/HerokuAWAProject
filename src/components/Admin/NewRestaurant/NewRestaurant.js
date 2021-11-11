@@ -47,10 +47,10 @@ const NewMenu = () => {
                   Price Level
                 </label>
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>€</option>
-                  <option>€€</option>
-                  <option>€€€</option>
-                  <option>€€€€</option>
+                  <option selected>€ - Cheap</option>
+                  <option>€€ - Average</option>
+                  <option>€€€ - Expensive</option>
+                  <option>€€€€ - Very Expensive</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -61,11 +61,13 @@ const NewMenu = () => {
                   <option selected>Buffet</option>
                   <option>Pizza</option>
                   <option>Burger</option>
-                  <option>Suchi</option>
+                  <option>Sushi</option>
                   <option>Chinese</option>
-                  <option>Vegeterian</option>
+                  <option>Japanese</option>
+                  <option>Mediterranean</option>
                   <option>Mexican</option>
                   <option>Thai</option>
+                  <option>Vegeterian</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -76,7 +78,7 @@ const NewMenu = () => {
               </div>
               <button type="submit" class="btn btn-outline-dark">
                 {" "}
-                Store in Database and Display
+                Save And Display
               </button>
             </form>
           </div>
