@@ -9,11 +9,21 @@ import {
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const style = {
+    position: "sticky",
+    left: "0",
+    bottom: "0",
+    width: "100%",
+    textAlign: "center",
+  };
   return (
     <div>
-      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-light mt-5">
+      <footer
+        style={style}
+        className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-light mt-5"
+      >
         <div className="col-md-4 d-flex align-items-center mx-5">
-          <span className="text-muted">Group28 Services ©2021 Group28, Inc</span>
+          <span className="text-muted">© 2021 Group28 Services, Inc</span>
         </div>
 
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex mx-5">
