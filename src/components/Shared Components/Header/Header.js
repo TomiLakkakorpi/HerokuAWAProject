@@ -26,32 +26,6 @@ const Header = () => {
 
       <div className="text-end">
         <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          {/* <p
-            className="nav-link text-dark dropdown-toggle mx-2"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            User
-          </p>
-          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <a className="dropdown-item" href="#">
-                View Order Status
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                View Order History
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Log Out
-              </a>
-            </li>
-          </ul> */}
-
           {/* condition ? exprIfTrue : exprIfFalse */}
           <li className="nav-link link-dark h6 text-uppercase mt-3 mx-2">
             <MdAccountCircle size="1.5em" color="#D70F64" />{" "}

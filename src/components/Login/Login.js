@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../Shared Components/Header/Header";
 import Footer from "./../Shared Components/Footer/Footer";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [loginInfo, setLoginInfo] = useState("");
-  // console.log(loginInfo);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const login = async (event) => {
     event.preventDefault();
+    let from = location.state?.from?.pathname || "/";
 
     const result = await fetch("http://localhost:3030/api/login", {
       method: "POST",
@@ -22,14 +23,20 @@ const Login = () => {
         password,
       }),
     }).then((res) => res.json());
-
+    navigate(from, { replace: true });
+    alert(result.message);
     const user = result.user;
-    if (user.role === "admin") {
-      localStorage.setItem("currentLoggedIn", JSON.stringify(user));
-      window.location.href = "/admin";
-    } else if (user.role === "user") {
-      localStorage.setItem("currentLoggedIn", JSON.stringify(user));
-      window.location.href = "/";
+    if (user) {
+      if (user.role === "admin") {
+        localStorage.setItem("currentLoggedIn", JSON.stringify(user));
+        window.location.href = "/admin";
+      } else if (user.role === "user") {
+        localStorage.setItem("currentLoggedIn", JSON.stringify(user));
+        // window.location.href = "/";
+        // navigate(from, { replace: true });
+      }
+    } else {
+      window.location.href = "/login";
     }
   };
 
@@ -76,7 +83,7 @@ const Login = () => {
               <br />
               <div className="">
                 <p>Haven't and Account Yet!</p>{" "}
-                <Link className="" to="signup">
+                <Link className="" to="/signup">
                   <b>Click Here</b>
                 </Link>
               </div>

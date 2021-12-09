@@ -7,9 +7,10 @@ import Restaurants from "../Restaurants/Restaurants";
 const NewMenu = () => {
   const [restaurants, setRestaurants] = useState([]);
   // console.log("from", restaurants);
+  const filter = "";
 
   useEffect(() => {
-    fetch(`http://localhost:3030/api/allRestaurants`)
+    fetch(`http://localhost:3030/api/allRestaurants?search=` + filter)
       .then((res) => res.json())
       .then((data) => {
         setRestaurants(data);

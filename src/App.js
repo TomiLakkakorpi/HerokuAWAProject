@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Admin from "./components/Admin/Admin/Admin";
 import NewAdmin from "./components/Admin/NewAdmin/NewAdmin";
@@ -9,64 +9,64 @@ import DisplayMenus from "./components/Home/DisplayMenus/DisplayMenus";
 import Home from "./components/Home/Home/Home";
 import Login from "./components/Login/Login";
 import Review from "./components/OrderComponents/Review/Review";
-import Delivered from "./components/Processing/Delivered/Delivered";
-import Delivering from "./components/Processing/Delivering/Delivering";
-import Delivery from "./components/Processing/Delivery/Delivery";
-import Preparing from "./components/Processing/Preparing/Preparing";
-import Recieved from "./components/Processing/Recieved/Recieved";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Registration from "./components/Registration/Registration";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/admin">
-          <Admin />
-        </Route>
-        <Route exact path="/login">
-          <Login />
-        </Route>
-        <Route exact path="/signup">
-          <Registration />
-        </Route>
-        <Route exact path="/newRestaurant">
-          <NewRestaurant />
-        </Route>
-        <Route exact path="/newMenu">
-          <NewMenu />
-        </Route>
-        <Route exact path="/newAdmin">
-          <NewAdmin />
-        </Route>
-        <Route exact path="/newMenuForm/:restaurantName">
-          <NewMenuFrom />
-        </Route>
-        <Route exact path="/displayMenus/:restaurantName">
-          <DisplayMenus />
-        </Route>
-        <Route exact path="/recieved">
-          <Recieved />
-        </Route>
-        <Route exact path="/preparing">
-          <Preparing />
-        </Route>
-        <Route exact path="/readyForDelivery">
-          <Delivery />
-        </Route>
-        <Route exact path="/delivering">
-          <Delivering />
-        </Route>
-        <Route exact path="/delivered">
-          <Delivered />
-        </Route>
-        <Route exact path="/review">
-          <Review />
-        </Route>
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route
+        path="/admin"
+        element={
+          <PrivateRoute>
+            <Admin />
+          </PrivateRoute>
+        }
+      />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Registration />} />
+      <Route
+        path="/newRestaurant"
+        element={
+          <PrivateRoute>
+            <NewRestaurant />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/newMenu"
+        element={
+          <PrivateRoute>
+            <NewMenu />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/newAdmin"
+        element={
+          <PrivateRoute>
+            <NewAdmin />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/newMenuForm/:restaurantName"
+        element={
+          <PrivateRoute>
+            <NewMenuFrom />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/review"
+        element={
+          <PrivateRoute>
+            <Review />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
   );
 }
 

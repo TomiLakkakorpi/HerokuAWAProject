@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../Shared Components/Header/Header";
 import ReviewForm from "../../OrderComponents/Review/ReviewForm";
-import ReviewTable from "./ReviewTable";
+import Header from "../../Shared Components/Header/Header";
 import Footer from "./../../Shared Components/Footer/Footer";
+import ReviewTable from "./ReviewTable";
 
 const Review = () => {
   const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems);
+  // console.log(cartItems);
 
   useEffect(() => {
     const data = localStorage.getItem("cartItems");

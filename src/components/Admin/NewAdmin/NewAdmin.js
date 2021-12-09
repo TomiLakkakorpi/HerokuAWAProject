@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import Footer from "../../Shared Components/Footer/Footer";
 import Header from "../../Shared Components/Header/Header";
+import Sidebar from "../Sidebar/Sidebar";
 
 const NewAdmin = () => {
   const [email, setEmail] = useState("");
@@ -35,14 +36,16 @@ const NewAdmin = () => {
   return (
     <section>
       <Header />
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
-          <div className="text-center my-4">
-            <h2>Welcome!</h2>
-            <p>Sign up to continue</p>
+          <div className="col-md-3">
+            <Sidebar />
           </div>
-          <div className="col-md-3"></div>
           <div className="col-md-6">
+            <div className="text-center my-4">
+              <h2>Welcome!</h2>
+              <p>Sign up to continue</p>
+            </div>
             <form onSubmit={newAdmin}>
               <div className="">
                 <input

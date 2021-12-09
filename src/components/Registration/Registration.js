@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import Header from "../Shared Components/Header/Header";
 import Footer from "./../Shared Components/Footer/Footer";
@@ -8,50 +7,31 @@ const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
-  console.log(email, firstName, lastName, password);
+  // console.log(email, firstName, lastName, password);
 
   const newUser = async (event) => {
     event.preventDefault();
 
-    const formData = new FormData();
-    formData.append("email", email);
-    formData.append("firstName", firstName);
-    formData.append("lastName", lastName);
-    formData.append("password", password);
-
-    console.log(formData);
-
-    await axios
-      .post("http://localhost:3030/api/newUser", {
+    const result = await fetch("http://localhost:3030/api/newUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         email,
         firstName,
         lastName,
         password,
-      })
-      .then((res) => {
-        console.log(res);
-      });
-    // .then((window.location.href = "/"));
+      }),
+    }).then((res) => res.json());
+    alert(result.message);
+
+    if (result.message === "sucessfull") {
+      window.location.href = "/login";
+    } else {
+      window.location.href = "/signup";
+    }
   };
-
-  // const newUser = async (event) => {
-  //   event.preventDefault();
-
-  //   const formData = new FormData();
-  //   formData.append("email", email);
-  //   formData.append("firstName", firstName);
-  //   formData.append("lastName", lastName);
-  //   formData.append("password", password);
-
-  //   await axios
-  //     .post("http://localhost:3030/api/newUser", formData)
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => console.log(err));
-  //   // .then((window.location.href = "/signup"));
-  // };
-
   return (
     <section>
       <Header />
