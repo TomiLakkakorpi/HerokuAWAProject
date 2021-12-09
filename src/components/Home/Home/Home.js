@@ -25,7 +25,7 @@ const Home = () => {
       <Header />
       <div className="container">
         <Promotion />
-        <h3 className="text-secondary my-3 pt-5">Popular Restaurant</h3>
+        <h3 className="text-secondary my-3 pt-5">Popular Restaurants</h3>
         <input
           placeholder="Search for your favourite restaurant here"
           type="search"
@@ -41,7 +41,7 @@ const Home = () => {
               ></Restaurants>
             ))
           ) : (
-            <h1 className="text-center my-5">No Restaurant Found</h1>
+            <h1 className="text-center my-5">No Restaurants Found</h1>
           )}
         </div>
       </div>

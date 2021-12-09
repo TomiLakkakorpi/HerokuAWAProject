@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "../../Shared Components/Footer/Footer";
 import Header from "../../Shared Components/Header/Header";
+import { MdFastfood } from "react-icons/md";
+import styles from "./Delivery.module.css";
 
 const Delivery = () => {
   setTimeout(function () {
@@ -14,7 +16,8 @@ const Delivery = () => {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <h3 className="text-center">We are ready for delivery your food</h3>
+            <h3 className="text-center">Your food is ready to be delivered</h3>
+            <div className={styles.icon}> <MdFastfood size={56}/> </div>
           </div>
           <div className="col-md-2"></div>
         </div>

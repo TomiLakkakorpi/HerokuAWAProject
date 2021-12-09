@@ -14,7 +14,7 @@ import Delivered from "./components/Processing/Delivered/Delivered";
 import Delivering from "./components/Processing/Delivering/Delivering";
 import Delivery from "./components/Processing/Delivery/Delivery";
 import Preparing from "./components/Processing/Preparing/Preparing";
-import Recieved from "./components/Processing/Recieved/Recieved";
+import Received from "./components/Processing/Received/Received";
 import Registration from "./components/Registration/Registration";
 
 function App() {
@@ -65,7 +65,7 @@ function App() {
       />
       <Route path="/displayMenus/:restaurantName" element={<DisplayMenus />} />
       <Route
-        path="/recieved"
+        path="/received"
         element={
           <PrivateRoute>
             <Recieved />

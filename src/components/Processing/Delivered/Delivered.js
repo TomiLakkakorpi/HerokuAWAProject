@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "../../Shared Components/Footer/Footer";
 import Header from "../../Shared Components/Header/Header";
+import styles from "./Delivered.module.css";
+import { FaThumbsUp } from "react-icons/fa";
 
 const Delivered = () => {
   return (
@@ -11,10 +13,11 @@ const Delivered = () => {
           <div className="col-md-2"></div>
           <div className="col-md-8">
             <h3 className="text-center">
-              We have successfully Delivered your food
+              Your food has been succesfully delivered!
             </h3>
-            <h4 className="text-center">Thank You For Staying With Us</h4>
-          </div>
+            <h4 className="text-center">Thank you for ordering from us!</h4>
+            <div className={styles.icon}> <FaThumbsUp size={56}/> </div>
+            </div>
           <div className="col-md-2"></div>
         </div>
       </div>

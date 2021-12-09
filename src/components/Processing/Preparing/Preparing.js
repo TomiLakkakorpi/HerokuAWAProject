@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "../../Shared Components/Footer/Footer";
 import Header from "../../Shared Components/Header/Header";
+import {GiCook} from "react-icons/gi";
+import styles from "./Preparing.module.css";
 
 const Preparing = () => {
   setTimeout(function () {
@@ -14,7 +16,8 @@ const Preparing = () => {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <h3 className="text-center">We are Preparing your food</h3>
+            <h3 className="text-center">Your food is being prepared</h3>
+            <div className={styles.icon}> <GiCook size={56}/> </div>
           </div>
           <div className="col-md-2"></div>
         </div>
