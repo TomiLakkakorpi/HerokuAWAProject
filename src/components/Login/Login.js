@@ -82,9 +82,9 @@ const Login = () => {
               <br />
               <br />
               <div className="">
-                <p>Haven't and Account Yet!</p>{" "}
+                <p>Dont have an account yet? Click the link below!</p>{" "}
                 <Link className="" to="/signup">
-                  <b>Click Here</b>
+                  <b>Create an account</b>
                 </Link>
               </div>
             </form>
