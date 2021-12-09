@@ -68,7 +68,7 @@ function App() {
         path="/received"
         element={
           <PrivateRoute>
-            <Recieved />
+            <Received />
           </PrivateRoute>
         }
       />
