@@ -7,7 +7,7 @@ import styles from "./Delivering.module.css";
 const Delivering = () => {
   setTimeout(function () {
     window.location.href = "/delivered";
-  }, 5000000);
+  }, 5000);
 
   return (
     <section>
