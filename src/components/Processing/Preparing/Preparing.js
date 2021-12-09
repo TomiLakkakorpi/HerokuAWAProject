@@ -16,7 +16,7 @@ const Preparing = () => {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <h3 className="text-center">Your food is being prepared</h3>
+            <h3 className="text-center">Your order is being prepared</h3>
             <div className={styles.icon}> <GiCook size={56}/> </div>
           </div>
           <div className="col-md-2"></div>

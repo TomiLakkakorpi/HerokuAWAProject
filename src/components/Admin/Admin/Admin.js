@@ -27,11 +27,11 @@ const Admin = () => {
           <div className="col-md-6">
             {orders.length > 1 ? (
               <div>
-                <h2 className="text-center my-3">New Orderes Arrived! </h2>
+                <h2 className="text-center my-3">New Orders Arrived! </h2>
                 <h3 className="text-center my-3">Total : {orders.length} </h3>
               </div>
             ) : (
-              <h2 className="text-center my-3">No Order Arrived! </h2>
+              <h2 className="text-center my-3">No new orders have arrived </h2>
             )}
 
             {orders.map((order) => (
