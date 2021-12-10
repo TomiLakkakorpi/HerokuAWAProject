@@ -28,7 +28,7 @@ const NewMenuForm = () => {
     console.log(formData);
 
     await axios
-      .post("http://localhost:3030/api/addMenu", formData)
+      .post("https://awaprojectback.herokuapp.com/api/addMenu", formData)
       .then((res) => {
         console.log(res);
       })

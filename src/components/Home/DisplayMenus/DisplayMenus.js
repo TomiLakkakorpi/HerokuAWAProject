@@ -37,7 +37,7 @@ const DisplayMenus = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3030/api/allMenus/${restaurantName}`)
+    fetch(`https://awaprojectback.herokuapp.com/api/allMenus/${restaurantName}`)
       .then((res) => res.json())
       .then((data) => {
         setMenus(data);

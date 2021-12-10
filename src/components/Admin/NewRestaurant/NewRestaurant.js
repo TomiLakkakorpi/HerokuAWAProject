@@ -29,7 +29,7 @@ const NewRestaurant = () => {
     formData.append("restaurantImage", restaurantImage);
 
     axios
-      .post("http://localhost:3030/api/user-profile", formData, {})
+      .post("https://awaprojectback.herokuapp.com/api/user-profile", formData, {})
       .then((res) => {
         console.log(res);
       })

@@ -7,7 +7,7 @@ const OrderView = (props) => {
   // console.log(cart);
 
   const handleDelete = () => {
-    fetch(`http://localhost:3030/api/findAndDelete/${id}`).then((res) =>
+    fetch(`https://awaprojectback.herokuapp.com/api/findAndDelete/${id}`).then((res) =>
       res.json()
     );
     alert("Successfully Removed");
@@ -15,7 +15,7 @@ const OrderView = (props) => {
     location.reload();
   };
   const handleRecieve = () => {
-    fetch(`http://localhost:3030/api/findAndDelete/${id}`).then((res) =>
+    fetch(`https://awaprojectback.herokuapp.com/api/findAndDelete/${id}`).then((res) =>
       res.json()
     );
     alert("Order Recieved");

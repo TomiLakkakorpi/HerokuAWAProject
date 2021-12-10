@@ -21,7 +21,7 @@ const NewAdmin = () => {
     formData.append("password", password);
 
     axios
-      .post("http://localhost:3030/api/newAdmin", {
+      .post("https://awaprojectback.herokuapp.com/api/newAdmin", {
         email,
         firstName,
         lastName,

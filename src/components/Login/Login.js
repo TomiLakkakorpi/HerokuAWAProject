@@ -13,7 +13,7 @@ const Login = () => {
     event.preventDefault();
     let from = location.state?.from?.pathname || "/";
 
-    const result = await fetch("http://localhost:3030/api/login", {
+    const result = await fetch("https://awaprojectback.herokuapp.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

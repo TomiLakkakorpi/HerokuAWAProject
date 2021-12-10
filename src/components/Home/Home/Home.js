@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3030/api/allRestaurants?search=` + filter)
+    fetch(`https://awaprojectback.herokuapp.com/api/allRestaurants?search=` + filter)
       .then((res) => res.json())
       .then((data) => {
         setRestaurants(data);

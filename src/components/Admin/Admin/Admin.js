@@ -9,7 +9,7 @@ const Admin = () => {
   console.log(orders);
 
   useEffect(() => {
-    fetch(`http://localhost:3030/api/allOrders`)
+    fetch(`https://awaprojectback.herokuapp.com/api/allOrders`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);

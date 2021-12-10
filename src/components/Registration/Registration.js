@@ -12,7 +12,7 @@ const Registration = () => {
   const newUser = async (event) => {
     event.preventDefault();
 
-    const result = await fetch("http://localhost:3030/api/newUser", {
+    const result = await fetch("https://awaprojectback.herokuapp.com/api/newUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

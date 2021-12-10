@@ -21,7 +21,7 @@ const ReviewTable = () => {
     var address = addressInfo.options[addressInfo.selectedIndex].text;
     console.log(address);
 
-    const result = await fetch("http://localhost:3030/api/orders", {
+    const result = await fetch("https://awaprojectback.herokuapp.com/api/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
